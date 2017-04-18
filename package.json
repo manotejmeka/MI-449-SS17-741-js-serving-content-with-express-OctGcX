@@ -1,0 +1,31 @@
+{
+  "name": "project-name-goes-here",
+  "version": "1.0.0",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2"
+  },
+  "scripts": {
+    "dev:sass": "node-sass source/scss/style.scss --watch --output=public --output-style=compressed --source-map=true",
+    "dev:node": "node server.js",
+    "dev:js": "standard clicky.js",
+    "dev:html": "htmlhint index.html",
+    "dev:scss": "stylelint \"source/scss/*.scss\"",
+    "dev": "run-p dev:*",
+    "build:sass": "node-sass source/scss/style.scss --output=publoc --output-style=compressed --source-map=true",
+    "deploy:surge": "surge --project . --domain https://mekamano-kg-tgc7noax99ajvzzg.surge.sh/",
+    "deploy": "run-s build:* deploy:surge"
+  },
+  "devDependencies": {
+    "htmlhint": "^0.9.13",
+    "node-sass": "^4.5.2",
+    "npm-run-all": "^4.0.2",
+    "standard": "^10.0.2",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0",
+    "surge": "^0.19.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  }
+}

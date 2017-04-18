@@ -1,0 +1,12 @@
+@import "_variables";
+
+body {
+  margin: 5px;
+  background-color: #333;
+  color: #fff;
+  font-family: $serif-fonts;
+}
+
+h2 {
+  color: $h2-color;
+}
