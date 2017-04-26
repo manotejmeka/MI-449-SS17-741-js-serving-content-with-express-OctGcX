@@ -6,15 +6,15 @@
     "express": "^4.15.2"
   },
   "scripts": {
-    "dev:sass": "node-sass source/scss/style.scss --watch --output=public --output-style=compressed --source-map=true",
-    "dev:node": "node server.js",
+    "dev:sass": "node-sass source/scss/style.scss --output=public --output-style=compressed --source-map=true",
     "dev:js": "standard clicky.js",
     "dev:html": "htmlhint index.html",
-    "dev:scss": "stylelint \"source/scss/*.scss\"",
+    "dev:sass2": "stylelint \"source/scss/*.scss\"",
+    "dev:node": "node server.js",
     "dev": "run-p dev:*",
-    "build:sass": "node-sass source/scss/style.scss --output=publoc --output-style=compressed --source-map=true",
-    "deploy:surge": "surge --project . --domain https://mekamano-kg-tgc7noax99ajvzzg.surge.sh/",
-    "deploy": "run-s build:* deploy:surge"
+    "build:sass": "node-sass source/scss/style.scss --output=public --output-style=compressed --source-map=true",
+    "deploy:heroku": "git push heroku master",
+    "deploy": "run-s build:* deploy:*"
   },
   "devDependencies": {
     "htmlhint": "^0.9.13",

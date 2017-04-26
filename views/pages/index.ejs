@@ -1,8 +1,10 @@
+<% include ../partials/navbar %>
 <% include ../partials/header %>
+<% include ../partials/picsinline %>
 
 <% Object.keys(articles).forEach(function (id) { %>
   <article>
-    <h2><%= articles[id].title %></h2>
+    <h4><%= articles[id].title %></h4>
     <p><%= articles[id].content %></p>
   </article>
 <% }) %>

@@ -1,0 +1,5 @@
+<nav class="topnav">
+  <% Object.keys(navLinks).forEach(function (id) { %>
+    <a href=<%= navLinks[id].link %> ><%= navLinks[id].title %></a> 
+  <% }) %>
+</nav>
