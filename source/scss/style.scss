@@ -5,7 +5,6 @@ body {
   background-color: #333;
   color: #fff;
   font-family: $serif-fonts;
-  font-size: $font-size * 0.55;
 }
 
 h1 {
@@ -26,11 +25,11 @@ h4 {
 }
 
 h5 {
-  font-size: $font-size * 1;
+  font-size: $font-size * 1.25;
 }
 
 h6 {
-  font-size: $font-size * 0.95;
+  font-size: $font-size * 1.2;
 }
 
 .topnav {
@@ -54,10 +53,15 @@ h6 {
 }
 
 .images img {
-  float: right;
+  float: left;
 }
 
 img {
-  width: $font-size * 7.5;
-  height: $font-size * 7.5;
+  width: $font-size * 15;
+  height: $font-size * 10;
+  padding: $font-size * 0.2;
+}
+
+.images.imgstyle {
+  text-align: center;
 }

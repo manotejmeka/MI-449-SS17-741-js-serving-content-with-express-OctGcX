@@ -1,6 +1,9 @@
 <div class="images">
-	<!--<% Object.keys(images).forEach(function (id) { %>
-		<img src=<%= images[id].url %> />
-	<% }) %>-->
-	Testing
+	<div class="imgstyle">
+	<% images.forEach(function (image) { %>
+		<h3> <%= image.alt %> </h3>
+		<img src=<%= image.url %> alt=<%= image.alt %> title=<%= image.alt %> />
+		
+	<% }) %>
+	</div>
 </div>
