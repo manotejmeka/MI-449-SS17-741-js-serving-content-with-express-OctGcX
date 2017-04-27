@@ -19,8 +19,9 @@ app.get('/', function (request, response) {
 })
 
 app.get('/about', function (request, response) {
-  response.render('pages/about', {
+  response.render('pages/detailed', {
     headerPhrase: 'About me',
+    pagename: 'about',
     articles: articles,
     navLinks: navLinks,
     images: images['about']
@@ -28,8 +29,9 @@ app.get('/about', function (request, response) {
 })
 
 app.get('/action', function (request, response) {
-  response.render('pages/action', {
+  response.render('pages/detailed', {
     headerPhrase: 'Action Movies',
+    pagename: 'action',
     articles: articles,
     navLinks: navLinks,
     images: images['action']
@@ -37,8 +39,9 @@ app.get('/action', function (request, response) {
 })
 
 app.get('/adventure', function (request, response) {
-  response.render('pages/adventure', {
+  response.render('pages/detailed', {
     headerPhrase: 'Adventure Movies',
+    pagename: 'adventure',
     articles: articles,
     navLinks: navLinks,
     images: images['adventure']

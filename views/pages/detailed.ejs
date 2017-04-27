@@ -1,11 +1,15 @@
 <% include ../partials/navbar %>
 <% include ../partials/header %>
 
-<p>
+<% if (pagename == 'about') { %>
+  <p>
     Movies are a integral part of my life. I have been watching movies at a young age.
     I watch many different types of movies in many different languages.
 
     My favorite movies are:
+      
     
-    <% include ../partials/picsinline %>
-</p>
+  </p>
+<% } %>
+<% include ../partials/picsinline %>
+
